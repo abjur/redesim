@@ -23,3 +23,5 @@ Imports:
     magrittr,
     readxl,
     tidyr
+URL: https://github.com/abjur/redesim
+BugReports: https://github.com/abjur/redesim/issues
