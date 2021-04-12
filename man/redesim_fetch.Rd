@@ -7,9 +7,9 @@
 redesim_fetch(ano = 2021, mes = 3, uf = "")
 }
 \arguments{
-\item{ano}{ano de consulta. Por padrão, 2021.}
+\item{ano}{ano(s) de consulta. Por padrão, 2021.}
 
-\item{mes}{mes de consulta. Por padrão, março (mês 3).}
+\item{mes}{mes(es) de consulta. Por padrão, março (mês 3).}
 
 \item{uf}{UF de consulta. Por padrão, baixa de todo o Brasil.}
 }

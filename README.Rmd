@@ -1,0 +1,61 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# redesim
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+O objetivo do pacote `{redesim}` é baixar e organizar dados de tempos para abertura de empresas, disponíveis no site da Redesim.
+
+## Instalação
+
+``` r
+# install.packages("remotes")
+remotes::install_github("abjur/redesim")
+```
+## Example
+
+Exemplo básico de como baixar os dados para um mês e um ano específico.
+
+```{r example}
+library(redesim)
+da <- redesim::redesim_fetch(2020:2021, c(1), c("AL", "PA"))
+dplyr::glimpse(da)
+```
+
+```{r grafico, fig.width=8, fig.height=5, dpi = 300}
+library(ggplot2)
+da %>% 
+  dplyr::mutate(ano = stringr::str_sub(ano_mes_uf, 1, 4)) %>% 
+  ggplot(aes(y = uf, x = qtde_hh_viabilidade_total, fill = ano)) +
+  geom_jitter(
+    alpha = .02,
+    position = position_dodge2(width = .8)
+  ) +
+  geom_boxplot() +
+  scale_fill_viridis_d(begin = .2, end = .8, alpha = .9) +
+  theme_minimal(12) +
+  labs(
+    x = "Quantidade de horas da análise de viabilidade",
+    y = "UF",
+    fill = "ano",
+    title = "Quantidade de horas total da análise de viabilidade",
+    subtitle = "Comparando Janeiro 2020 com Janeiro 2021, UFs AL e PA",
+    caption = "Fonte: Redesim"
+  ) +
+  theme(legend.position = "bottom")
+```
+

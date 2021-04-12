@@ -21,7 +21,9 @@ Imports:
     janitor,
     lubridate,
     magrittr,
+    purrr,
     readxl,
+    tibble,
     tidyr
 URL: https://github.com/abjur/redesim
 BugReports: https://github.com/abjur/redesim/issues
