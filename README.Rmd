@@ -18,7 +18,11 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-O objetivo do pacote `{redesim}` é baixar e organizar dados de tempos para abertura de empresas, disponíveis no site da Redesim.
+A Rede Nacional para a Simplificação do Registro e da Legalização de Empresas e Negócios (Redesim) é uma rede de sistemas que integra os sistemas da maioria dos municípios e juntas comerciais de todo o Brasil. O objetivo da Redesim é simplificar os procedimentos e reduzir tempo e custo para registro de novas empresas. As metas da Redesim está alinhada com as métricas do Doing Business, relatório do Banco Mundial que mede a capacidade do país para fazer negócios.
+
+Os dados da Redesim, apesar de serem acessíveis, não são abertos. O objetivo do pacote `{redesim}` é baixar e organizar os dados de tempos para abertura de empresas, disponíveis no site da Redesim. Os dados estão disponíveis desde 2019 e são atualizados mensalmente.
+
+O pacote faz parte dos trabalhos que estão sendo realizados pela ABJ em parceria com o Departamento Nacional de Registro Empresarial e Integração (DREI), do Ministério da Economia.
 
 ## Instalação
 
@@ -26,7 +30,8 @@ O objetivo do pacote `{redesim}` é baixar e organizar dados de tempos para aber
 # install.packages("remotes")
 remotes::install_github("abjur/redesim")
 ```
-## Example
+
+## Exemplo
 
 Exemplo básico de como baixar os dados para um mês e um ano específico.
 
