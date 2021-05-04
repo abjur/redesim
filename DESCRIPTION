@@ -27,3 +27,5 @@ Imports:
     tidyr
 URL: https://github.com/abjur/redesim
 BugReports: https://github.com/abjur/redesim/issues
+Depends: 
+    R (>= 2.10)
